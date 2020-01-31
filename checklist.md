@@ -28,7 +28,7 @@ Create an index.html file which contains:
 	- [X] Street
 	- [B] House Number (only allowing numbers in this field)
 	- [X] Gender (You don't control me)
-- [ ] A button to place the order
+- [X] A button to place the order
 
 ## 03 CSS
 
