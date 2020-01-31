@@ -13,118 +13,104 @@
       </header>
 
       <section id="borgar">
-        <h2>Burgers here:</h2>
-        <p>Here go burgers. You pick one.</p>
+          <h2>Burgers here:</h2>
+          <p>Here go burgers. You pick one.</p>
 
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <h2>Halloumiburger</h2>
-              </th>
-              <th>
-                <h2>Smokey Chipotle Halloumiburger</h2>
-              </th>
-              <th>
-                <h2>Umami Halloumiburger</h2>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td align="center">
-                <img src="img/product_halloumiburger.jpg" alt="Delicious burger" title="Halloumiburger" width="300">
-              </td>
-              <td align="center">
-                <img src="img/product_smokey-chipotle-halloumi.jpg" alt="Delicious burger" title="Smokey Chipotle Halloumiburger" width="300">
-              </td>
-              <td align="center">
-                <img src="img/product_umami-halloumi.jpg" alt="Delicious burger" title="Umami Halloumiburger" width="300">
-              </td>
-            </tr>
+        <div id="borgar-wrapper">
+          <div class="box burger-div" id="A">
+            <h2>Halloumiburger</h2>
+            <div class="box image-div">
+              <img src="img/product_halloumiburger.jpg" alt="Delicious burger" title="Halloumiburger" width="300">
+            </div>
+            <div class="box details-div">
+              <dt>Calories</dt>
+              <dd>Maybe some</dd>
+              <dt>Content</dt>
+              <dd>Brioche <span class="allergy">bread</span>, jalapeño salsa, <span class="allergy">halloumi</span> burger, tomato, onions, lettuce, and <span class="allergy">mayo</span>.</dd>
+              <dt>Allergy</dt>
+              <dd>Gluten, milk protein, lactose, egg, and mustard.</dd>
+            </div>
+          </div>
 
-            <tr>
-              <td>
-                <dl>
-                  <dt>Calories</dt>
-                  <dd>Maybe some</dd>
-                  <dt>Content</dt>
-                  <dd>Brioche <span class="allergy">bread</span>, jalapeño salsa, <span class="allergy">halloumi</span> burger, tomato, onions, lettuce, and <span class="allergy">mayo</span>.</dd>
-                  <dt>Allergy</dt>
-                  <dd>Gluten, milk protein, lactose, egg, and mustard.</dd>
-                </dl>
-              </td>
-              <td>
-                <dl>
-                  <dt>Calories</dt>
-                  <dd>Lots</dd>
-                  <dt>Content</dt>
-                  <dd>You can <span class="allergy">see</span> picture.</dd>
-                  <dt>Allergy</dt>
-                  <dd>Same.</dd>
-                </dl>
-              </td>
-              <td>
-                <dl>
-                  <dt>Calories</dt>
-                  <dd>Many</dd>
-                  <dt>Content</dt>
-                  <dd>Pickled onions, tomato, umami <span class="allergy">dressing</span>, and big <span class="allergy">halloumi</span>.</dd>
-                  <dt>Allergy</dt>
-                  <dd>If you want to.</dd>
-                </dl>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="box burger-div" id="B">
+            <h2>Smokey Chipotle Halloumiburger</h2>
+            <div class="box image-div">
+              <img src="img/product_smokey-chipotle-halloumi.jpg" alt="Delicious burger" title="Smokey Chipotle Halloumiburger" width="300">
+            </div>
+            <div class="box details-div">
+              <dt>Calories</dt>
+              <dd>Lots</dd>
+              <dt>Content</dt>
+              <dd>You can <span class="allergy">see</span> picture.</dd>
+              <dt>Allergy</dt>
+              <dd>Same.</dd>
+
+            </div>
+          </div>
+
+          <div class="box burger-div" id="C">
+            <h2>Umami Halloumiburger</h2>
+            <div class="box image-div">
+              <img src="img/product_umami-halloumi.jpg" alt="Delicious burger" title="Umami Halloumiburger" width="300">
+            </div>
+            <div class="box details-div">
+              <dt>Calories</dt>
+              <dd>Many</dd>
+              <dt>Content</dt>
+              <dd>Pickled onions, tomato, umami <span class="allergy">dressing</span>, and big <span class="allergy">halloumi</span>.</dd>
+              <dt>Allergy</dt>
+              <dd>If you want to.</dd>
       </section>
+            </div>
+          </div>
 
-      <section id="secrets">
-        <h2>Secrets here:</h2>
-        <p>Here you tell us your information. We don't sell it.</p>
-        <form autocomplete="on">
-          <p>
-          <label for="name">Full legal name</label><br>
-          <input type="text" id="name" name="name" required placeholder="Here please" autocomplete="name" />
-          </p>
 
-          <p>
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" required placeholder="We won't spam" autocomplete="email" />
-          </p>
+          <section id="secrets">
+            <h2>Secrets here:</h2>
+            <p>Here you tell us your information. We don't sell it.</p>
+            <form autocomplete="on">
+              <p>
+              <label for="name">Full legal name</label><br>
+              <input type="text" id="name" name="name" required placeholder="Here please" autocomplete="name" />
+              </p>
 
-          <p>
-          <label for="street">Address</label><br>
-          <input type="text" id="name" name="address" required placeholder="Here please" autocomplete="shipping street-address" />
-          </p>
+              <p>
+              <label for="email">Email</label><br>
+              <input type="email" id="email" name="email" required placeholder="We won't spam" autocomplete="email" />
+              </p>
 
-          <p>
-          <label for="phone">Phone</label><br>
-          <input type="tel" name="phone" id="phone" placeholder="We won't call" autocomplete="tel" />
-          </p>
+              <p>
+              <label for="street">Address</label><br>
+              <input type="text" id="name" name="address" required placeholder="Here please" autocomplete="shipping street-address" />
+              </p>
 
-          <p>
-          <label for="gender">"Gender"</label><br>
-          <input type="radio" name="gender" value="Agender">Agender<br>
-          <input type="radio" name="gender" value="Bigender">Bigender<br>
-          <input type="radio" name="gender" value="Gendefluid" checked>Genderfluid
-          </p>
+              <p>
+              <label for="phone">Phone</label><br>
+              <input type="tel" name="phone" id="phone" placeholder="We won't call" autocomplete="tel" />
+              </p>
 
-          <input name="cardnumber" autocomplete="cc-number" style="display: none" />
-          <input name="cvc" autocomplete="cc-csc" style="display: none" />
-          <input name="cc-exp" autocomplete="cc-exp" style="display: none" />
+              <p>
+              <label for="gender">"Gender"</label><br>
+              <input type="radio" name="gender" value="Agender">Agender<br>
+              <input type="radio" name="gender" value="Bigender">Bigender<br>
+              <input type="radio" name="gender" value="Gendefluid" checked>Genderfluid
+              </p>
 
-          <p>
-          <label for="method">Payment Method</label><br>
-          <select id="method" name="method">
-            <option>Card</option>
-            <option>Swish</option>
-            <option>Cash</option>
-            <option selected>FooCash&trade;</option>
-          </p>
-        </form>
-      </section>
-      <input type="submit" value="Send" class="button"/>
+              <input name="cardnumber" autocomplete="cc-number" style="display: none" />
+              <input name="cvc" autocomplete="cc-csc" style="display: none" />
+              <input name="cc-exp" autocomplete="cc-exp" style="display: none" />
+
+              <p>
+              <label for="method">Payment Method</label><br>
+              <select id="method" name="method">
+                <option>Card</option>
+                <option>Swish</option>
+                <option>Cash</option>
+                <option selected>FooCash&trade;</option>
+              </p>
+            </form>
+          </section>
+          <input type="submit" value="Send" class="button"/>
     </main>
     <footer>
       &copy; Copyright yes

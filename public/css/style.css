@@ -29,9 +29,45 @@
   margin: 5px;
 }
 
-table {
-  width: 70%;
-  margin: 0 auto;
+#borgar-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.box {
+  padding: 20px;
+  border: 1px solid;
+}
+
+#A {
+  grid-column: 1;
+}
+
+#B {
+  grid-column: 2;
+}
+
+#C {
+  grid-column: 3;
+}
+
+.burger-div {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100%;
+}
+
+.image-div {
+  grid-row: 2;
+}
+
+.image-div img {
+  width: 100%;
+}
+
+.details-div {
+  grid-row: 3;
 }
 
 body {
