@@ -1,0 +1,50 @@
+
+#header {
+  margin: 2%;
+}
+
+#header img {
+  opacity: .8;
+}
+
+.button:hover {
+  background-color: lightsteelblue;
+  border-color: lightsteelblue;
+  cursor: pointer; 
+}
+
+.button {
+  margin: 5px;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: arial;
+  font-size: 1.4em;
+}
+
+.allergy {
+  font-weight: bold;
+}
+
+section {
+  margin: 2%;
+  border: 1px dotted;
+  padding: 2%;
+}
+
+#secrets {
+  background-color: black;
+  color: white;
+}
+
+#borgar {
+}
+
+footer {
+  font-size: 0.7rem;
+}
