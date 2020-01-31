@@ -22,12 +22,12 @@ Create an index.html file which contains:
 	- [X] A name
 	- [X] An image
 	- [X] Information about allergies 
-- [ ] A section to collect customer information:
+- [X] A section to collect customer information:
 	- [X] First- and Last Name (in one field)
 	- [X] E-Mail Address
 	- [X] Street
 	- [B] House Number (only allowing numbers in this field)
-	- [ ] Gender (male, female, do not wish to provide as radio buttons)
+	- [X] Gender (You don't control me)
 - [ ] A button to place the order
 
 ## 03 CSS
