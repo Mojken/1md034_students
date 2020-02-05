@@ -40,15 +40,15 @@
   border: 1px solid;
 }
 
-#A {
+.A {
   grid-column: 1;
 }
 
-#B {
+.B {
   grid-column: 2;
 }
 
-#C {
+.C {
   grid-column: 3;
 }
 
