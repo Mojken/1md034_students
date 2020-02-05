@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Maximum Burgers</title>
     <meta charset="utf-8"/>
@@ -20,6 +17,24 @@
         <p>Here go burgers. You pick one.</p>
 
         <div id="borgar-wrapper">
+          <!--
+          <div v-for="burger in burgers">
+            <h1>{{ burger.name }}</h1>
+            <div class="box image-div">
+              <img v-bind:src="burger.img" width=300>
+            </div>
+
+            <div class="box image-div">
+              <dt>Calories</dt>
+              <dd>{{ burger.calories }} kcal</dd>
+              <dt>Content</dt>
+              <dd>{{ burger.contents.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.</dd>
+              <dt v-if="burger.allergy.length > 0">Allergy</dt>
+              <dd v-if="burger.allergy.length > 0">{{ burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.</dd>
+            </div>
+          </div>
+          -->
+
           <h2>Halloumiburger</h2>
           <div class="box image-div A">
             <img src="img/product_halloumiburger.jpg" alt="Delicious burger" title="Halloumiburger" width="300">
@@ -111,5 +126,9 @@
     <footer>
       &copy; Copyright yes
     </footer>
+
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/js_script.js"></script>
+    <script src="js/vue_script.js"></script>
   </body>
 </html>

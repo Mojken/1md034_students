@@ -49,8 +49,18 @@ let e = new menuItem(
   ["gluten", "sesame seeds", "milk protein", "lactose", "celery", "soya beans", "egg", "mustard"]
 );
 
-console.log(a.stats());
-console.log(b.stats());
-console.log(c.stats());
-console.log(d.stats());
-console.log(e.stats());
+function burger(burger) {
+  ret = "";
+  ret += "<h2>" + burger.name + "</h2>";
+  ret += '<div class="box"><img src="' + burger.img + '" width="300"></div>';
+  ret += "<div class='box'>"
+  ret += "<dt>Calories</dt><dd>" + burger.calories + "</dd>";
+  ret += "<dt>Content</dt><dd>" + burger.contents.join(', ').replace(/^\w/, c => c.toUpperCase()) + "</dd>";
+  ret += "<dt>Allergy</dt><dd>" + burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) + "</dd>";
+  ret += "</div>"
+  return ret;
+}
+
+let burgers = [a, b, c, d, d]; 
+
+document.getElementById("borgar-wrapper").innerHTML += burgers.map(x => burger(x)).join('');
