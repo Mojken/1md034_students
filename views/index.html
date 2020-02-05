@@ -29,7 +29,9 @@
               <dt>Content</dt>
               <dd>{{ burger.contents.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.</dd>
               <dt v-if="burger.allergy.length > 0">Allergy</dt>
-              <dd v-if="burger.allergy.length > 0">{{ burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.</dd>
+              <dd v-if="burger.allergy.length > 0">
+                {{ burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.
+              </dd>
             </div>
           </div>
         </div>
@@ -87,8 +89,9 @@
       &copy; Copyright yes
     </footer>
 
+    <script src="js/menu.js"></script>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="js/vue_script.js"></script>
-    <script src="js/js_script.js"></script>
+    <!-- <script src="js/js_script.js"></script> -->
   </body>
 </html>
