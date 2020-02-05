@@ -63,4 +63,4 @@ function burger(burger) {
 
 let burgers = [a, b, c, d, e]; 
 
-document.getElementById("borgar-wrapper").innerHTML += burgers.map(x => burger(x)).join('');
+//document.getElementById("borgar-wrapper").innerHTML += burgers.map(x => burger(x)).join('');

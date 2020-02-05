@@ -17,7 +17,6 @@
         <p>Here go burgers. You pick one.</p>
 
         <div id="borgar-wrapper">
-          <!--
           <div v-for="burger in burgers">
             <h1>{{ burger.name }}</h1>
             <div class="box image-div">
@@ -33,66 +32,63 @@
               <dd v-if="burger.allergy.length > 0">{{ burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.</dd>
             </div>
           </div>
-          -->
-
-          
         </div>
       </section>
 
 
-          <section id="secrets">
-            <h2>Secrets here:</h2>
-            <p>Here you tell us your information. We don't sell it.</p>
-            <form autocomplete="on">
-              <p>
-              <label for="name">Full legal name</label><br>
-              <input type="text" id="name" name="name" required placeholder="Here please" autocomplete="name" />
-              </p>
+      <section id="secrets">
+        <h2>Secrets here:</h2>
+        <p>Here you tell us your information. We don't sell it.</p>
+        <form autocomplete="on">
+          <p>
+          <label for="name">Full legal name</label><br>
+          <input type="text" id="name" name="name" required placeholder="Here please" autocomplete="name" />
+          </p>
 
-              <p>
-              <label for="email">Email</label><br>
-              <input type="email" id="email" name="email" required placeholder="We won't spam" autocomplete="email" />
-              </p>
+          <p>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" required placeholder="We won't spam" autocomplete="email" />
+          </p>
 
-              <p>
-              <label for="street">Address</label><br>
-              <input type="text" id="name" name="address" required placeholder="Here please" autocomplete="shipping street-address" />
-              </p>
+          <p>
+          <label for="street">Address</label><br>
+          <input type="text" id="name" name="address" required placeholder="Here please" autocomplete="shipping street-address" />
+          </p>
 
-              <p>
-              <label for="phone">Phone</label><br>
-              <input type="tel" name="phone" id="phone" placeholder="We won't call" autocomplete="tel" />
-              </p>
+          <p>
+          <label for="phone">Phone</label><br>
+          <input type="tel" name="phone" id="phone" placeholder="We won't call" autocomplete="tel" />
+          </p>
 
-              <p>
-              <label for="gender">"Gender"</label><br>
-              <input type="radio" name="gender" value="Agender">Agender<br>
-              <input type="radio" name="gender" value="Bigender">Bigender<br>
-              <input type="radio" name="gender" value="Gendefluid" checked>Genderfluid
-              </p>
+          <p>
+          <label for="gender">"Gender"</label><br>
+          <input type="radio" name="gender" value="Agender">Agender<br>
+          <input type="radio" name="gender" value="Bigender">Bigender<br>
+          <input type="radio" name="gender" value="Gendefluid" checked>Genderfluid
+          </p>
 
-              <input name="cardnumber" autocomplete="cc-number" style="display: none" />
-              <input name="cvc" autocomplete="cc-csc" style="display: none" />
-              <input name="cc-exp" autocomplete="cc-exp" style="display: none" />
+          <input name="cardnumber" autocomplete="cc-number" style="display: none" />
+          <input name="cvc" autocomplete="cc-csc" style="display: none" />
+          <input name="cc-exp" autocomplete="cc-exp" style="display: none" />
 
-              <p>
-              <label for="method">Payment Method</label><br>
-              <select id="method" name="method">
-                <option>Card</option>
-                <option>Swish</option>
-                <option>Cash</option>
-                <option selected>FooCash&trade;</option>
-              </p>
-            </form>
-          </section>
-          <input type="submit" value="Send" class="button"/>
+          <p>
+          <label for="method">Payment Method</label><br>
+          <select id="method" name="method">
+            <option>Card</option>
+            <option>Swish</option>
+            <option>Cash</option>
+            <option selected>FooCash&trade;</option>
+          </p>
+        </form>
+      </section>
+      <input type="submit" value="Send" class="button"/>
     </main>
     <footer>
       &copy; Copyright yes
     </footer>
 
-    <!--    <script src="https://vuejs.org/js/vue.js"></script>
-    <script src="js/vue_script.js"></script> -->
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/vue_script.js"></script>
     <script src="js/js_script.js"></script>
   </body>
 </html>
