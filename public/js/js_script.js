@@ -1,16 +1,35 @@
+let orderButton = document.getElementById("order");
 
-function burger(burger) {
-  ret = "<div class='menuborgar'>";
-  ret += "<h2>" + burger.name + "</h2>";
-  ret += '<div class="box image-div"><img src="' + burger.img + '" width="300"></div>';
-  ret += "<div class='box'>"
-  ret += "<dt>Calories</dt><dd>" + burger.calories + "</dd>";
-  ret += "<dt>Content</dt><dd>" + burger.contents.join(', ').replace(/^\w/, c => c.toUpperCase()) + "</dd>";
-  ret += "<dt>Allergy</dt><dd>" + burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) + "</dd>";
-  ret += "</div></div>"
-  return ret;
+function order() {
+  var form = document.getElementById("secrets");
+
+  var nameArr = Array.from(form.getElementsByClassName("name"));
+  var emailArr = Array.from(form.getElementsByClassName("email"));
+  var addressArr = Array.from(form.getElementsByClassName("street"));
+  var phoneArr = Array.from(form.getElementsByClassName("phone"));
+  var genderArr = Array.from(form.getElementsByClassName("gender"));
+  var paymentArr = Array.from(form.getElementsByClassName("payment"));
+
+  function getGender(gender) {
+    if (gender.checked) return gender.value;
+    else return "";
+  }
+
+  var name = nameArr.map(x => x.value).join(", ");
+  var email = emailArr.map(x => x.value).join(", ");
+  var address = addressArr.map(x => x.value).join(", ");
+  var phone = phoneArr.map(x => x.value).join(", ");
+  var gender = genderArr.map(x => getGender(x)).join("");
+  var payment = paymentArr.map(x => x.value).join(", ");
+
+  console.log("--- Order: --- \n" +
+  "Name: " + name + "\n" +
+  "Email: " + email + "\n" +
+  "Address: " + address + "\n" +
+  "Phone: " + phone + "\n" +
+  "Gender: " + gender + "\n" +
+  "Payment: " + payment + "\n");
 }
 
-let burgers = [a, b, c, d, e]; 
+//orderButton.addEventListener("click", order);
 
-//document.getElementById("borgar-wrapper").innerHTML += burgers.map(x => burger(x)).join('');

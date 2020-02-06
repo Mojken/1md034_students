@@ -34,4 +34,119 @@ let menu = [
     "contents": ["sesame bread", "Delifresh plant beef", "cheddar", "ketchup", "tomato", "onions", "lettuce", "original dressing"],
     "allergy": ["gluten", "sesame seeds", "milk protein", "lactose", "celery", "soya beans", "egg", "mustard"]
   }
-]
+];
+
+
+let fields = [
+  {
+    "name": "name",
+    "text": "Full legal name",
+    "show": true,
+    "required": "true",
+    "inputs": [
+      {
+        "checked": false,
+        "value": "",
+        "type": "text",
+        "placeholder": "Here please",
+        "autocomplete": "name",
+        "text": "" 
+      }
+    ]
+  },
+  {
+    "name": "email",
+    "text": "Email",
+    "show": true,
+    "required": "true",
+    "inputs": [
+      {
+        "checked": false,
+        "value": "",
+        "type": "email",
+        "placeholder": "We won't spam",
+        "autocomplete": "email",
+        "text": "" 
+      }
+    ]
+  },
+  {
+    "name": "street",
+    "text": "Address",
+    "show": true,
+    "required": "true",
+    "inputs": [
+      {
+        "checked": false,
+        "value": "",
+        "type": "text",
+        "placeholder": "Here please",
+        "autocomplete": "shipping street-address",
+        "text": "" 
+      }
+    ]
+  },
+  {
+    "name": "phone",
+    "text": "Phone",
+    "show": true,
+    "required": "true",
+    "inputs": [
+      {
+        "checked": false,
+        "value": "",
+        "type": "tel",
+        "placeholder": "We won't call",
+        "autocomplete": "tel",
+        "text": "" 
+      }
+    ]
+  },
+  {
+    "name": "gender",
+    "text": "ZOI Gender",
+    "show": true,
+    "required": false,
+    "inputs": [
+      {
+        "checked": false,
+        "type": "radio",
+        "placeholder": false,
+        "autocomplete": false,
+        "text": "Agender",
+        "value": "Agender"
+      },
+      {
+        "checked": false,
+        "value": "Monogender",
+        "type": "radio",
+        "placeholder": false,
+        "autocomplete": false,
+        "text": "Monogender"
+      },
+      {
+        "checked": true,
+        "value": "Multigender",
+        "type": "radio",
+        "placeholder": false,
+        "autocomplete": false,
+        "text": "Multigender"
+      }
+    ]
+  },
+  {
+    "name": "cardnumber",
+    "show": false,
+    "autocomplete": "cc-number"
+  },
+  {
+    "name": "cvc",
+    "show": false,
+    "autocomplete": "cc-csc"
+  },
+  {
+    "name": "cc-exp",
+    "show": false,
+    "autocomplete": "cc-exp"
+  }
+];
