@@ -4,14 +4,19 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Maximum Burgers</title>
     <meta charset="utf-8"/>
+    <script src="js/menu.js" defer></script>
+    <script src="js/js_script.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="https://vuejs.org/js/vue.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
   </head>
   <body> 
-    <main id="vue">
-      <header id="header">
-        <h1>Welcom to Maximum Borgars!</h1>
-        <img src="img/logo-max.svg" alt="This is our logo" title="MAXimum burgers">
-      </header>
+    <header id="header">
+      <h1>Welcom to Maximum Borgars!</h1>
+      <img src="img/logo-max.svg" alt="This is our logo" title="MAXimum burgers">
+    </header>
 
+    <main id="vue">
       <section id="borgar">
         <h2>Burgers here:</h2>
         <p>Here go burgers. You pick one.</p>
@@ -24,7 +29,7 @@
               <img v-bind:src="burger.img" width=300>
             </div>
 
-            <div class="box image-div">
+            <dl class="box image-div">
               <dt>Calories</dt>
               <dd>{{ burger.calories }} kcal</dd>
               <dt>Content</dt>
@@ -33,11 +38,10 @@
               <dd v-if="burger.allergy.length > 0">
                 {{ burger.allergy.join(', ').replace(/^\w/, c => c.toUpperCase()) }}.
               </dd>
-            </div>
+            </dl>
           </div>
         </div>
       </section>
-
 
       <section id="secrets">
         <h2>Secrets here:</h2>
@@ -54,13 +58,11 @@
           </div>
         </div>
 
-
         <form autocomplete="on">
           <div v-for="field in secrets">
             <div v-if="field.show">
-              <p>
               <label :id='field.name' :for='field.name'> {{ field.text }} </label><br>
-              <tag v-for="input in field.inputs">
+              <div v-for="input in field.inputs">
               <input
                 v-model='field.result'
                 :class='field.name'
@@ -72,7 +74,7 @@
                 :name='field.name'
                 :autocomplete="input.autocomplete"
                 />{{ input.text }}<br> 
-              </tag>
+              </div>
             </div>
             <div v-else>
               <input
@@ -90,7 +92,17 @@
             <option>Swish</option>
             <option>Cash</option>
             <option selected>FooCash&trade;</option>
-              </p>
+          </select>
+
+          <div class="view-box">
+            <div id="dots" v-on:click="addOrder">
+              <div 
+                 v-for="(orderInfo, key) in orders"
+                 v-bind:style="{ left: orderInfo.details.x + 'px', top: orderInfo.details.y + 'px'}">
+                {{key}}
+              </div>
+            </div>
+          </div>
         </form>
       </section>
       <input v-on:click="order" id="order" type="button" value="Send" class="button"/>
@@ -99,9 +111,5 @@
       &copy; Copyright yes
     </footer>
 
-    <script src="js/menu.js"></script>
-    <script src="js/js_script.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script>
-    <script src="js/vue_script.js"></script>
   </body>
 </html>

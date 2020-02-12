@@ -71,22 +71,6 @@ let fields = [
     ]
   },
   {
-    "name": "street",
-    "text": "Address",
-    "show": true,
-    "required": "true",
-    "inputs": [
-      {
-        "checked": false,
-        "value": "",
-        "type": "text",
-        "placeholder": "Here please",
-        "autocomplete": "shipping street-address",
-        "text": "" 
-      }
-    ]
-  },
-  {
     "name": "phone",
     "text": "Phone",
     "show": true,
