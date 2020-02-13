@@ -17,6 +17,7 @@ const vm = new Vue({
 
     socket.on('currentQueue', function(data) {
       this.orders = data.orders;
+      console.log(data);
     }.bind(this));
   },
 });

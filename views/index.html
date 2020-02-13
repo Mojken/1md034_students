@@ -47,17 +47,6 @@
         <h2>Secrets here:</h2>
         <p>Here you tell us your information. We don't sell it.</p>
 
-        <div v-if='orderData.ordered'>
-          <p>burgers:</p>
-          <div v-for='burger in orderData.burgers'>
-            {{ burger }}
-          </div>
-          <p>data:</p>
-          <div v-for="data in orderData">
-            {{ data }}
-          </div>
-        </div>
-
         <form autocomplete="on">
           <div v-for="field in secrets">
             <div v-if="field.show">
@@ -95,17 +84,17 @@
           </select>
 
           <div class="view-box">
-            <div id="dots" v-on:click="addOrder">
-              <div 
-                 v-for="(orderInfo, key) in orders"
-                 v-bind:style="{ left: orderInfo.details.x + 'px', top: orderInfo.details.y + 'px'}">
-                {{key}}
+            <div id="dots" v-on:click="displayOrder">
+              <div v-if="orderData.target.pressed"
+                   v-bind:style="{ left: orderData.target.x + 'px', top: orderData.target.y + 'px'}">
+                T
               </div>
             </div>
           </div>
+
         </form>
+        <input v-on:click="order" id="order" type="button" value="Send" class="button"/>
       </section>
-      <input v-on:click="order" id="order" type="button" value="Send" class="button"/>
     </main>
     <footer>
       &copy; Copyright yes
