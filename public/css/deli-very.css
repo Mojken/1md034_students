@@ -11,6 +11,7 @@ body {
 	border: 1px solid rgba(0,0,0,0.4);
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
+
 #dots {
 	position: relative;
 	margin: 0;
@@ -22,7 +23,7 @@ body {
 	cursor: crosshair;
 }
 
-#dots div {
+.dot {
 	position: absolute;
 	background: black;
 	color: white;
@@ -40,4 +41,21 @@ body {
 	color:black;
 	background: rgba(255,255,255, 0.5);
 	padding: 1em;
+}
+
+.tooltip {
+  text-align: left;
+  position: relative;
+  border: 0.8em; 
+  color: black;
+  background: rgba(255, 255, 255, 0.5);
+
+  visibility: hidden;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.order:hover .tooltip {
+  visibility:visible
 }

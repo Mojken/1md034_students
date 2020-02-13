@@ -13,12 +13,29 @@
   <div id="orders">
     <div id="orderList">
       <div v-for="(order, key) in orders">
-        #{{ key }}: {{ order.burgers.join(", ") }}
+        #{{ key }}:
+        {{ order.burgers.join(", ") }}<br>
+        {{ order.name }}<br>
+        {{ order.email }}<br>
+        {{ order.phone }}<br>
+        {{ order.gender }}<br>
+        {{ order.payment }}<br>
+        <hr>
       </div>
     </div>
     <div id="dots">
-        <div v-for="(order, key) in orders" v-bind:style="{ left: order.target.x + 'px', top: order.target.y + 'px'}">
+        <div class="order dot" v-for="(order, key) in orders" v-bind:style="{ left: order.target.x + 'px', top: order.target.y + 'px'}">
           {{ key }}
+          <div class="tooltip">
+            <p>Burgers:</p>
+            {{ order.burgers.join(", ") }}<br>
+            <p>Info:</p>
+            {{ order.name }}<br>
+            {{ order.email }}<br>
+            {{ order.phone }}<br>
+            {{ order.gender }}<br>
+            {{ order.payment }}
+          </div>
         </div>
     </div>
   </div>

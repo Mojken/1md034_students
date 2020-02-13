@@ -95,6 +95,16 @@
         </form>
         <input v-on:click="order" id="order" type="button" value="Send" class="button"/>
       </section>
+      <div v-if='orderData.ordered'>
+        <p>burgers:</p>
+        <div v-for='burger in orderData.burgers'>
+          {{ burger }}
+        </div>
+        <p>data:</p>
+        <div v-for="data in orderData">
+          {{ data }}
+        </div>
+      </div>
     </main>
     <footer>
       &copy; Copyright yes
